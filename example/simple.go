@@ -50,7 +50,7 @@ func main() {
 	}
 
 	fmt.Println()
-	fmt.Println("Query: (king & scandi:*) | Threatens)")
+	fmt.Println("Query: (king & scandi:*) | beautiful")
 	// Marshaling the index, it can be persisted on disk and using the file interface, read directly by query
 	indexBytes := tsar.MarshalIndex(index)
 	result, err := query.Query("(king & scandi:*) | beautiful", bytes.NewReader(fileBytes), bytes.NewReader(indexBytes), 5, 0)
